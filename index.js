@@ -13,7 +13,9 @@ app.use(cors())
 
 const port = 5000
 
-
+app.get('/',(req,res) =>{
+    res.send("welcome to Mongodb Database!! Now you Can use this Data...")
+})
 
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 client.connect(err => {
